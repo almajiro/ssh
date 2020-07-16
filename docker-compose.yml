@@ -1,0 +1,16 @@
+version: '3.5'
+
+services:
+    php:
+        build:
+            context: ./docker/php
+        volumes:
+            - ./:/var/www
+    server:
+        build:
+            context: ./docker/ssh
+
+networks:
+    default:
+        external:
+            name: lidc
