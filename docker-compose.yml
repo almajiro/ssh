@@ -9,8 +9,3 @@ services:
     server:
         build:
             context: ./docker/ssh
-
-networks:
-    default:
-        external:
-            name: lidc
