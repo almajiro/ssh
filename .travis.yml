@@ -5,7 +5,7 @@ service: docker
 before_install:
     - docker-compose build
     - docker-compose up -d
-    - sudo apt-get install -y make
+    - docker-compose exec php composer install
 
 script:
     - make test
