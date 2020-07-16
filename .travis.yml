@@ -1,0 +1,11 @@
+sudo: required
+language: php
+service: docker
+
+before_install:
+    - docker-compose build
+    - docker-compose up -d
+    - apt-get install make
+
+script:
+    - make test
