@@ -5,7 +5,7 @@ service: docker
 before_install:
     - docker-compose build
     - docker-compose up -d
-    - apt-get install make
+    - apt-get install -y make
 
 script:
     - make test
