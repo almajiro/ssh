@@ -3,7 +3,7 @@
 
 Simple SSH2 Wrapper for PHP
 
-# Installation (comming soon)
+# Installation (coming soon)
 ```
 composer require almajiro/ssh
 ```
