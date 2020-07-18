@@ -26,7 +26,7 @@ class FileSystemTest extends TestCase
     private function getTempFile(string $text = 'This is a test')
     {
         $tempFilePath = tempnam('/tmp', 'test');
-        $fp = fopen($tempFilePath, "w+");
+        $fp = fopen($tempFilePath, 'w+');
         fwrite($fp, $text);
         fclose($fp);
 
@@ -80,4 +80,3 @@ class FileSystemTest extends TestCase
         $this->assertEquals($mode, $this->fileSystem->getFilePerms($remoteFilePath));
     }
 }
-

@@ -26,7 +26,7 @@ class CommandTest extends TestCase
 
     public function testGetErrorReturnsCorrectResult()
     {
-        $error_msg = "error message";
+        $error_msg = 'error message';
         $command = $this->connection->command("1>&2 echo \"${error_msg}\"");
         $this->assertSame($error_msg, $command->getError());
     }
@@ -38,4 +38,3 @@ class CommandTest extends TestCase
         $this->assertSame($commandToRun, $command->getCommand());
     }
 }
-

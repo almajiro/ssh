@@ -6,14 +6,13 @@ use Exception;
 
 class SshException extends Exception
 {
-    static public function noConnection()
+    public static function noConnection()
     {
-        return new self("No connection is established.");
+        return new self('No connection is established.');
     }
 
-    static public function unableToConnect()
+    public static function unableToConnect()
     {
-        return new self("Unable to connect server.");
+        return new self('Unable to connect server.');
     }
 }
-
