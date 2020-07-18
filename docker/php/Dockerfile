@@ -12,6 +12,9 @@ RUN cd /tmp && \
     echo "extension=ssh2.so" > /usr/local/etc/php/conf.d/ext-ssh2.ini && \
     rm -rf /tmp/ssh2
 
+RUN pecl install xdebug && \
+    docker-php-ext-enable xdebug
+
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 USER ${APP_UID}
