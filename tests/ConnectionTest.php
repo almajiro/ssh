@@ -3,8 +3,8 @@
 namespace Tests;
 
 use Almajiro\Ssh\Connection;
-use Almajiro\Ssh\Exceptions\SshException;
 use Almajiro\Ssh\Exceptions\AuthorizationFailedException;
+use Almajiro\Ssh\Exceptions\SshException;
 use PHPUnit\Framework\TestCase;
 
 class ConnectionTest extends TestCase
@@ -85,4 +85,3 @@ class ConnectionTest extends TestCase
         $connection->getConnection();
     }
 }
-

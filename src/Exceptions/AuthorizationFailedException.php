@@ -6,19 +6,18 @@ use Exception;
 
 class AuthorizationFailedException extends Exception
 {
-    static public function noCredentials()
+    public static function noCredentials()
     {
-        return new self("Invalid Authorization Method");
+        return new self('Invalid Authorization Method');
     }
 
-    static public function invalidPassword()
+    public static function invalidPassword()
     {
-        return new self("Failed to authorize via password");
+        return new self('Failed to authorize via password');
     }
 
-    static public function invalidPrivateKey()
+    public static function invalidPrivateKey()
     {
-        return new self("Failed to authorize via Key-pair");
+        return new self('Failed to authorize via Key-pair');
     }
 }
-

@@ -55,7 +55,6 @@ class FileSystem
 
     private function getStreamPath(string $path)
     {
-        return "ssh2.sftp://".intval($this->scpConnection).$path;
+        return 'ssh2.sftp://'.intval($this->scpConnection).$path;
     }
 }
-

@@ -65,7 +65,7 @@ class Connection
 
     public function disconnect()
     {
-        return ($this->isConnected = ! ssh2_disconnect($this->connection));
+        return $this->isConnected = !ssh2_disconnect($this->connection);
     }
 
     public function isConnected()
@@ -85,7 +85,7 @@ class Connection
 
     public function getConnection()
     {
-        if (! $this->isConnected) {
+        if (!$this->isConnected) {
             throw SshException::noConnection();
         }
 
@@ -110,4 +110,3 @@ class Connection
         throw AuthorizationFailedException::invalidPrivateKey();
     }
 }
-
