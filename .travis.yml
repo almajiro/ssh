@@ -9,5 +9,6 @@ before_install:
 
 script:
     - make test
-    - sudo chown -R travis:travis build
-    - php vendor/bin/php-coveralls -v
+
+after_success:
+    travis_retry docker-compose exec -e COVERALLS_REPO_TOKEN=$COVERALLS_REPO_TOKEN php ./vendor/bin/php-coveralls -v
