@@ -9,4 +9,5 @@ before_install:
 
 script:
     - make test
-    - php vendor/bin/php-coveralls
+    - sudo chown -R travis:travis build
+    - php vendor/bin/php-coveralls -v
