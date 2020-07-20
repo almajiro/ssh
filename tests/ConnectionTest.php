@@ -84,4 +84,13 @@ class ConnectionTest extends TestCase
 
         $connection->getConnection();
     }
+
+    public function testDisconnect()
+    {
+        $connection = $this->getConnection();
+        $connection->usePassword($this->password);
+        $connection->connect();
+
+        $this->assertTrue($connection->disconnect());
+    }
 }

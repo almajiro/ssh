@@ -65,7 +65,7 @@ class Connection
 
     public function disconnect()
     {
-        return $this->isConnected = !ssh2_disconnect($this->connection);
+        return !($this->isConnected = !ssh2_disconnect($this->connection));
     }
 
     public function isConnected()
